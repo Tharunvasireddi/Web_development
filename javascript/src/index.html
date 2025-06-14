@@ -1,0 +1,22 @@
+<!doctype html>
+<html>
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link href="./output.css" rel="stylesheet">
+</head>
+<body>
+  <button id="changeColorButton">Change Color</button>
+  <div id="message" style="display:none;">Color Change</div>
+  <script>
+    document.getElementById('changeColorButton').addEventListener("click",function(){
+        document.body.style.backgroundColor=`#${Math.floor(Math.random()*16777215).toString(16)}`;
+        const message=document.getElementById('message');
+        message.style.display='block';
+        setTimeout(function(){
+            message.style.display='none';
+        },3000)
+    })
+  </script>
+</body>
+</html>

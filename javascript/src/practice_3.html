@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        function fetchUserData(){
+            return new Promise((Resolve,Reject)=>{
+                const sucess = Math.random()>0.5
+                setTimeout(()=>{
+                    if(success){
+                        Resolve({name:'jhon',age:30})
+                    }
+                    else{
+                        Reject('Error: Failed to fetch user data')
+                    }
+                },2000)
+            })
+        }
+        fetchUserData()
+        .then(data=>console.log('User data:',data))
+        .catch(er=>consol.console.error(er) )
+    </script>
+</body>
+</html>

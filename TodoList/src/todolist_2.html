@@ -1,0 +1,40 @@
+<!doctype html>
+<html>
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link href="./output.css" rel="stylesheet">
+  <style>
+      .completed {
+          text-decoration: line-through;
+      }
+  </style>
+</head>
+<body class="bg-black flex items-center justify-center w-auto min-h-screen">
+    <div class="bg-purple-950 text-center w-80 flex flex-col rounded-lg justify-center gap-4 p-4">
+        <h1 class="text-white font-serif">To-Do List</h1>
+        <div class="flex justify-center align-middle border-spacing-0">
+            <input type="text" id="taskInput" placeholder="Enter the text" class="rounded-sm p-1 flex-grow">
+            <button id="addButton" class="text-white bg-red-700 rounded-sm p-1 ml-2">Add</button>
+        </div>
+        <ul id="taskList" class="text-white list-disc list-inside list-none">
+            <!-- Tasks will be added here -->
+        </ul>
+    </div>
+    <script>
+      document.getElementById("addButton").addEventListener("click", function() {
+          const taskInput = document.getElementById("taskInput");
+          const taskList = document.getElementById("taskList");
+          if (taskInput.value.trim() !== "") {
+              const li = document.createElement("li");
+              li.textContent = taskInput.value;
+              li.addEventListener("click", function() {
+                  li.classList.toggle("completed");
+              });
+              taskList.appendChild(li);
+              taskInput.value = "";
+          }
+      });
+    </script>
+</body>
+</html>

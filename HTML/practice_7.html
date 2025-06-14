@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        body,html{
+            margin: 0;
+            padding: 0;
+        }
+        .navbar{
+            display: flex;
+            justify-content: space-around;
+            background-color:#333;
+            padding: 10px 20px;
+        }
+        .navbar a{
+            color: white;
+            text-decoration: none;
+            padding: 10px 20px;
+        }
+        .dropdown{
+            align-self: center;
+            position: relative;
+        }
+        .dropdown-content{
+            display:none;
+            position: absolute;
+            background-color: #333;
+            min-width:160px;
+            z-index: 1;
+        }
+        .dropdown-content a{
+            padding: 12px 6px;
+            display: block;
+            color: white;
+        }
+        .dropdown:hover .dropdown-content{
+            display:block;
+        }
+        .navbar a:hover,.dropdown-content a:hover{
+            background-color: #ddd;
+            color: black;
+        }
+    </style>
+</head>
+<body>
+   <div class="navbar">
+    <a href="#">Home</a>
+    <a href="#">About</a>
+    <div class="dropdown">
+        <a href="">Services</a>
+        <div class="dropdown-content">
+            <a href="#">Web Desgin</a>
+            <a href="#">SEO</a>
+            <a href="#">Marketing</a>
+        </div>
+    </div>
+    <a href="#">Contact</a>
+   </div> 
+</body>
+</html>

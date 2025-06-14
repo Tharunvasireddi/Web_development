@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        body{
+            padding: 0;
+            margin: 0;
+        }
+        .navbar{
+            position: sticky;
+            top:0;
+            background-color: #333;
+            padding: 10px 20px;
+            z-index: 1000;
+            display: flex;
+            justify-content: space-between;
+        }
+        .navbar a{
+            color: white;
+            text-decoration: none;   
+            padding :10px 20px;   
+          }
+          .navbar a:hover{
+            background-color: #ddd;
+          }
+    </style>
+</head>
+<body>
+  <div class="navbar">
+    <a href="#">Home</a>
+    <a href="#">About</a>
+    <a href="#">Service</a>
+    <a href="#">Contact</a>
+  </div>  
+  <div style="height: 1500px;">Scroll down to see the sticky navbar in action</div>
+</body>
+</html>

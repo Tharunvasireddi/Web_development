@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        body{
+            padding: 0;
+            margin: 0;
+            border:20px solid white;
+            height: 100vh;
+            background-color:black;
+            display: flex;
+            justify-content: center;
+            box-sizing: border-box;
+        }
+        .first {
+            width:40px;
+            height: 40px;
+            background-color: red;
+            border-radius: 50%;
+            animation : bounce 2s infinite ;
+        }
+        @keyframes bounce {
+            0%{transform: translateY(600px);}
+            50%{transform: translateX(150px)}
+            75%{transform: translateX(-150px);}
+            100%{transform: translateY(650px);}
+            
+        }
+        .second {
+            width:40px;
+            height: 40px;
+            background-color: pink;
+            border-radius: 50%;
+            align-self: self-start;
+            animation : bounce1 10s infinite ;
+        }
+        @keyframes bounce1 {
+            0%{transform: translateY(600px);}
+            50%{transform: translateX(-150px)}
+            75%{transform: translateX(150px);}
+            100%{transform: translateY(650px);}
+            
+        }
+    </style>
+</head>
+<body>
+    <div class="first"></div>
+    <div class="second"></div>
+    <div></div>
+</body>
+</html>

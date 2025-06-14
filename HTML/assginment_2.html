@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Flexbox Navigation Bar</title>
+  <style>
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
+
+    body {
+      font-family: Arial, sans-serif;
+    }
+
+    .navbar {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      padding: 10px 20px;
+      background-color: #333;
+      color: white;
+    }
+
+    .logo {
+      font-size: 20px;
+      font-weight: bold;
+    }
+
+    .menu {
+      display: flex;
+      gap: 20px;
+      list-style: none;
+    }
+
+    .menu li {
+      cursor: pointer;
+    }
+
+    .menu li:hover {
+      text-decoration: underline;
+    }
+
+    .login {
+      padding: 8px 16px;
+      background-color: #007BFF;
+      color: white;
+      border: none;
+      border-radius: 5px;
+      cursor: pointer;
+    }
+
+    .login:hover {
+      background-color: #0056b3;
+    }
+
+    /* Responsive Design */
+    @media (max-width: 600px) {
+      .navbar {
+        flex-direction: column;
+        align-items: flex-start;
+      }
+
+      .menu {
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 10px;
+        margin-top: 10px;
+      }
+
+      .login {
+        margin-top: 10px;
+        align-self: flex-end;
+      }
+    }
+  </style>
+</head>
+<body>
+  <nav class="navbar">
+    <div class="logo">MyLogo</div>
+    <ul class="menu">
+      <li>Home</li>
+      <li>About</li>
+      <li>Services</li>
+      <li>Contact</li>
+    </ul>
+    <button class="login">Login</button>
+  </nav>
+</body>
+</html>

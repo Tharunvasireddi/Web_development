@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <div>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Consequatur</div>
+    <span>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Blanditiis, nulla.</span>
+    <span>Lorem ipsum dolor sit amet consectetur adipisicing elit. Nostrum, dignissimos.</span>
+</body> 
+<script>
+    async function name(country) {
+        const data = await fetch(`https://cdn.jsdelivr.net/npm/@fawazahmed0/currency-api@latest/v1/currencies/${country}.json`)
+        const response = await data.json().data
+        return response;
+}
+const inrobj = name("inr")
+console.log(inrobj);
+
+const inrks = Object.keys(inrobj)
+console.log(inrks);
+
+</script>
+</html>

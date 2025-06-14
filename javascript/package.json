@@ -1,0 +1,16 @@
+{
+  "name": "javascript",
+  "version": "1.0.0",
+  "main": "ErrorHandling.js",
+  "type": "commonjs",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "description": "",
+  "devDependencies": {
+    "tailwindcss": "^3.4.17"
+  }
+}

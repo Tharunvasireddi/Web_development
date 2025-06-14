@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        body{
+            height:100vh;
+            background-color: black;
+            border: 10px solid whitesmoke;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            border-radius: 10%;
+        }
+        div{
+            height:400px;
+            width:400px ;
+            background-color:orange;
+            border: 10px solid blue;
+            display: flex;
+            justify-content: center;
+            border-radius: 10%;
+        }
+        .ball{
+            height: 30px;
+            width:30px;
+            border-radius: 50%;
+            background-color:pink;
+            animation: bounce 500ms infinite;
+        }
+        @keyframes bounce {
+            0%{transform:translateY(100px);}
+            50%{transform: translateY(350px);}
+            100%{transform: translateY(0px);}
+        }
+    </style>
+</head>
+<body>
+    <div><div class="ball"></div></div>
+</body>
+</html>
